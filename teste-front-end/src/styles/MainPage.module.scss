@@ -1,0 +1,41 @@
+$color-title:#4D4D4D;
+$color-buttons:#FBB900;
+.MainPage{
+    margin:  9rem 0 0 0;
+
+    .Section{
+        font-weight: bolder;
+        margin: 60px auto;
+        padding: 0 40px;
+        display: flex;
+        flex-direction: column;
+        h3{
+            color: $color-title;
+            font-weight: bolder;
+            font-size: 32px;
+            margin: 0 0 24px 20px;
+        }
+
+
+        .TitleOptions{
+            display: flex;
+            justify-content: space-between;
+            h3{
+                margin: auto 0;
+            }
+            .Options{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $color-buttons;
+
+                // .IconLeft{
+                // }
+                // .IconRight{
+                // }
+            }
+        }
+    }
+
+    
+}

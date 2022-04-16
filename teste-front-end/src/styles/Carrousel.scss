@@ -1,0 +1,158 @@
+  $color-primary:#ffffff ;
+  $color-button: #FBB900;
+.Carrousel{
+  width: 100%;
+  .Carrousel-Buttons{
+    color: $color-primary;
+    left: 0;
+    right: 0;
+  // z-index: 99999;
+    margin: 5rem 0;
+    height: 17.3rem;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    .Button{
+      display: flex;
+      justify-content: center;
+      font-size: 28px;
+      align-items: center;
+    }
+    .Left-Button{
+      margin: 0 auto 0 60px;
+     
+     
+    }
+    .Middle-Footer-Buttons{
+      height: 450px;
+      display: flex;
+      flex-direction: column;
+    
+    .Middle-Button{
+      width: 450px;
+      font-weight: 800;
+      font-size: 40px;
+      margin: 0 35rem 0 0;
+
+      button{
+        font-weight: 900;
+        font-size: 16px;
+        padding: 10px 30px;
+        background-color: $color-button;
+        color: $color-primary;
+        border: none;
+        border-radius: 10px;
+      }
+    }
+    .Footer-Button{
+      margin:  auto auto 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      div{
+        display: flex;
+        margin: 2px auto;
+       div{
+         margin: 10px 5px;
+         width: 10px;
+         height: 10px;
+         border-radius: 100%;
+         border: 1px solid white;
+
+       
+       }
+       .Active{
+        background-color: $color-primary;
+      }
+      
+      }
+      .Icon-Down{
+        background-color: $color-primary;
+        border-radius: 100%;
+        color: #000;
+        height: 32px ;
+        width: 32px;
+        text-align: center;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 6px 16px rgba(179, 134, 0, 0.24);
+
+      }
+    }
+  }
+    .Rigth-Button{
+      margin: 0 60px 0 auto;
+
+    }
+  }
+  .Carrousel-Images{
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 98.89%);
+  }
+}
+.Carrousel-Category{
+
+  .react-multiple-carousel__arrow--left{
+    top:35%;
+    left: 5px;
+    z-index: 99999;
+    box-shadow: 0px 6px 16px rgba(179, 134, 0, 0.24);
+  }
+  .react-multiple-carousel__arrow--right{
+    top:35%;
+    right: 5px;
+    box-shadow: 0px 6px 16px rgba(179, 134, 0, 0.24);
+  }
+  .react-multiple-carousel__arrow {
+    background-color: white;
+  }
+  .react-multiple-carousel__arrow::before {
+    color: #000;
+    font-weight: 800;
+    font-size: 14px;
+  }
+  .react-multiple-carousel__arrow {
+    position: absolute;
+    outline: 0;
+    transition: all .5s;
+    border-radius: 35px;
+    z-index: 1000;
+    border: 0;
+    background: white;
+    min-width: 32px;
+    min-height: 32px;
+    opacity: 1;
+    cursor: pointer;
+}
+  display: flex;
+  button{
+    background-color: black;
+    color: black;
+  }
+  button:hover{
+    color: black;
+    background-color: white;
+  }
+
+
+
+ 
+}
+.CarouselProdutcs{
+  margin: 10px 100px;
+  background-color: wheat;
+
+  div{
+    background-color: wheat;
+  }
+  .alice-carousel{
+    margin: 200px;
+
+    background-color: wheat;
+  }
+}  
+
+

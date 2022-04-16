@@ -1,0 +1,29 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Criando servidor da api para o teste.",
+  "main": "index.js",
+  "scripts": {
+    "server": "node src/server.js",
+    "projeto": "npm start --prefix teste-front-end",
+    "dev": "concurrently \"npm run server\" \"npm run projeto\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kaue-LS/teste-front-end-1.git"
+  },
+  "author": "Kaue-LS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kaue-LS/teste-front-end-1/issues"
+  },
+  "homepage": "https://github.com/Kaue-LS/teste-front-end-1#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "concurrently": "^7.1.0"
+  }
+}

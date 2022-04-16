@@ -1,0 +1,178 @@
+$background-color:#FBB900;
+$color-text:#ffffff;
+$color-border:#ffffff40;
+.Footer{
+    background-color: $background-color;
+    display: flex;
+    color: $color-text;
+    .About{
+        padding: 40px 40px;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-right: 2px solid $color-border;
+        h3{
+            text-align: center;
+            width: 300px;
+            font-weight: 700;
+            font-size: 28px;
+        }
+      
+        div{
+            margin: 30px auto 56px auto;
+            width: 30%;
+            display: flex;
+            justify-content: space-evenly;
+
+            .Icon{
+                height: 22px;
+                width: 22px;
+            }
+        }
+        article{
+            width: 339px;
+            font-weight: 400;
+            font-size: 14px;
+            text-align: center;
+            margin: 30px auto 12px auto;
+        }
+    }
+
+    .Info{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        .ContactPayment{
+            display: flex;
+            flex-direction: column;
+            border-bottom: 2px solid $color-border;
+            .Contact{
+                padding: 40px 00px 0 0px;
+                display: flex;
+                justify-content: space-evenly;
+                div{
+                    display: flex;
+                    flex-direction: column;
+
+                    h3{
+                        font-weight: 700;
+                        font-size: 20px;
+                        text-transform: uppercase;
+                    }
+
+                    p,a{
+                        cursor: pointer;
+                        font-weight: 500;
+                        font-size: 14px;
+                        margin: 10px 0;
+                    }
+                    a{
+                        text-decoration: none;
+                        color: $color-text;
+                    }
+
+                    div{
+                        margin: 15px 0;
+                        width: 150px;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        a{
+                            margin: auto 10px;
+                        }
+                    }
+                }
+            }
+            .Payment{
+                width: 100%;
+                margin: 30px auto 40px auto;
+                padding: 0 20px;
+                display: flex;
+                .IconsPay{
+                    width: 330px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: 0 40px;
+
+                    h3{
+                        font-weight: 700;
+                        font-size: 20px;
+                        margin: 0 0 30px 0px;
+
+                    }
+                    div{
+                        display: flex;
+                        flex-wrap: wrap;
+                        div{
+                            height: 55px;
+                            width: 100px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: white;
+                            border-radius: 10px;
+                            margin: 5px auto 0 0;
+
+
+                            img{
+                            padding: 0 15px;
+                            width: 80px;
+                        }
+                    }
+                    }
+                  
+                }
+                .Security{
+                    h3{
+                        font-weight: 700;
+                        font-size: 20px;
+                        margin: 0 0 30px 0px;
+
+                    }
+                    margin: 0 60px;
+
+                    img{
+                        width: 100px;
+                    }
+                }
+            }
+        }
+
+        .Copyrigth{
+            padding: 40px 56px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            div{
+                width: 40%;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                pre{
+                    font-weight: 400;
+                    font-size: 12px;
+                }
+                h3{
+                    display: flex;
+                span{
+                    text-align: center;
+                    display: block;
+                    background-color: white;
+                    color: #FBB900;
+                    width: 31.57px;
+                    height: 31.62px;
+                    margin: 0 -4px;
+                    border-radius: 100%;
+                }
+             }
+             div{
+                 width: 90px;
+             img{
+                 width: 40px;
+             }
+            }
+            }
+        }
+    }
+}

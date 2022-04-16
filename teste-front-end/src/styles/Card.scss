@@ -1,0 +1,92 @@
+
+.Card-Category{
+    display: flex;
+    flex-direction: column;
+    width: 277px;
+    margin: 0 auto;
+    z-index: 1000;
+    img{    
+        width: 100%;
+        width: 277px;
+        height: 277px;
+        border-radius: 10px;
+    }
+    p{
+        color: #9F9F9F;
+        font-weight: 500;
+        font-size: 16px;
+        margin: 16px auto;
+        text-align: center;
+    }
+
+  
+}
+.Card-Product{
+    width: 240px;
+    background-color: wheat;
+    display: flex;
+    justify-content: center;
+    .discount{
+        position: absolute;
+        left: 0;
+        background-color: white;
+    }
+
+    .favorite{
+        font-size: 20px;
+        right: 30%;
+        position: absolute;
+        background-color: #9F9F9F;
+    }
+
+    .main-info{
+        margin: 0 auto;
+        background-color: aqua;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        .name{
+            text-align: center;
+            font-weight: 300;
+            font-size: 14px;
+        }
+
+        .price-info{
+           
+            .past-price{
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                /* identical to box height */
+
+                text-align: center;
+                text-decoration-line: line-through;
+            }
+            .price-default{
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 27px;
+                text-align: center;
+            }
+            .price-signers{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                span{
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 24px;
+                text-align: center;
+                }
+            }
+        }
+       
+    }
+    button{
+        width: 100%;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+}

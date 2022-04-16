@@ -1,0 +1,28 @@
+$color-buttons:#FBB900;
+$color-text: #9F9F9F;
+$color-border: #9F9F9F70;
+
+
+.Buttons{
+    display: flex;
+    justify-content: space-evenly;
+    span{
+       
+        font-weight: 700;
+        font-size: 14px;
+        padding: 10px 15px;
+        margin: 0 5px;
+        border-radius: 6px;
+        background: none;
+        color: $color-text;
+        border: 1px solid $color-border;
+        
+    }
+    .Active{
+        color: white;
+        border: none;
+        background-color: $color-buttons;
+    }
+  
+    
+}
