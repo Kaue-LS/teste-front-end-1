@@ -3,8 +3,8 @@ import styles from "./styles/MainPage.module.scss";
 import { AiOutlineLeft } from "react-icons/ai";
 import { AiOutlineRight } from "react-icons/ai";
 
-import Carrousel from "./components/carrousel/Carousel";
-import CarrouselCategory from "./components/carrousel/CarouselCategory";
+import Carousel from "./components/carrousel/Carousel";
+import CarouselCategory from "./components/carrousel/CarouselCategory";
 import CarouselProducts from "./components/carrousel/CarouselProducts";
 
 import BackgroundImage from "../src/styles/img/background.png";
@@ -21,6 +21,17 @@ import Marc3 from './styles/img/marcs/petgames.png'
 import backgroundDog1 from '../src/styles/img/background-dog1.png'
 import backgroundDog2 from '../src/styles/img/background-dog2.png'
 
+import Blog1 from '../src/styles/img/blog/blog1.png'
+import Blog2 from '../src/styles/img/blog/blog2.png'
+import Blog3 from '../src/styles/img/blog/blog3.png'
+import Blog4 from '../src/styles/img/blog/blog4.png'
+
+import Insta1 from '../src/styles/img/instagram/insta1.png'
+import Insta2 from '../src/styles/img/instagram/insta2.png'
+import Insta3 from '../src/styles/img/instagram/insta3.png'
+
+import FormDog from '../src/styles/img/formDog.png'
+
 import {Api} from "./components/api/Api";
 import { useEffect, useState } from "react";
 import { useOptions } from "./components/context/OptionsContext";
@@ -30,7 +41,8 @@ import Options from "./components/options/Options";
 import Dot from "./components/dot/Dot";
 import CardOpenProduct from "./components/modal/CardOpenProduct";
 import CardProduct from "./components/card/CardProducts";
-import Carousel from "./components/carrousel/Carousel";
+import CardBlog from "./components/card/CardBlog";
+import SigIn from "./components/form/SigIn";
 
 
 
@@ -101,15 +113,30 @@ export default function MainPage() {
 
   },
   ]
+  const Blog=[
+    Blog1,
+    Blog2,
+    Blog3,
+    Blog4
+  ]
+  const Instagram=[
+    Insta3,
+      Insta1,
+      Insta2,
+      Insta3,
+      Insta1,
+      Insta2,
+   
+  ]
 
   return (
     <section className={styles.MainPage}>
-      <Carrousel button={'Confira'} className={'Carrousel'} text={"As melhores guias para os melhores passeios"} showArrows={true} images={BackgroundImage} />
+      <Carousel button={'Confira'} className={'Carrousel'} text={"As melhores guias para os melhores passeios"} showArrows={true} images={BackgroundImage} />
 
       {/* Categorias */}
-      <div className={styles.Section}>
+      <section className={styles.Section}>
         <h3>Categorias</h3>
-        <CarrouselCategory className={'Carrousel-Category'} itemDesktop={4} showArrows={true}>
+        <CarouselCategory className={'Carrousel-Category'} infinite={true} itemDesktop={4} showArrows={true}>
           {CategoryList.map((item, index) => (
             <Card
               className={"Card-Category"}
@@ -118,11 +145,11 @@ export default function MainPage() {
               key={index}
             />
           ))}
-        </CarrouselCategory>
-      </div>
+        </CarouselCategory>
+      </section>
 
       {/* Produtos */}
-      <div className={styles.Section}>
+      <section className={styles.Section}>
         <div className={styles.TitleOptions}>
           <h3>Meu cachorro...</h3>
           <div className={styles.Options}>
@@ -147,26 +174,27 @@ export default function MainPage() {
           <p>Ver todos</p>
           <Dot props={5}></Dot>
         </div>
-      </div>
+      </section>
 
       {/* Marcas */}
-      <div className={styles.Section}>
+      <section className={styles.Section}>
       <div className={styles.TitleOptions}>
           <h3>Principais marcas</h3>
           <div className={styles.Options}>
           <p>Ver todos</p>
           </div>
       </div>
-          <CarrouselCategory className={'Carrousel-Marc'} itemDesktop={6}>
+          <CarouselCategory className={'Carrousel-Marc'} itemDesktop={6}>
             {
               MarcList.map((item,index)=>(
                 <Card  url={item} key={index} className={"Card-Marc Card-"+index}/>
               ))
             }
-          </CarrouselCategory>
-      </div>
+          </CarouselCategory>
+      </section>
 
-      <div className={styles.Section}>
+      {/* Ads */}
+      <section className={styles.Section}>
         <div className={styles.CarouselGroup}>
         {
           backgroundDog.map((item,index)=>(
@@ -178,13 +206,46 @@ export default function MainPage() {
         <div className={styles.DotDogGroup}>
           <Dot props={3} active={0}></Dot>
         </div>
-      </div>
-
-      <div className={styles.Section}>
+      </section>
+        {/* Blog */}
+      <section className={styles.Section}>
           <h3>Confira o nosso blog</h3>
+          <CarouselCategory className={'Carrousel-Category'} itemDesktop={4} infinite={true} showArrows={true}>
+          {
+            Blog.map((item,index)=>(
+              <CardBlog url={item} key={index}></CardBlog>
+            ))
+          }
+        </CarouselCategory>
+        <div className={styles.DotArea}>
+          <Dot props={3} active={0}></Dot>
+        </div>
+      </section>
 
-          
+      {/* Instagram */}
+
+      <section className={styles.Section}>
+      <div className={styles.TitleOptions}>
+          <h3>Instagram</h3>
+          <div className={styles.Options}>
+          <p>+Seguir</p>
+          </div>
       </div>
+      <CarouselCategory className={'Carrousel-Instagram'} autoplay={true} itemDesktop={6} showArrows={false} infinite={true}>
+          {
+            Instagram.map((item,index)=>(
+              <Card
+              key={index}
+              className={"Card-Instagram"}
+              url={item}
+            />
+            ))
+          }
+      </CarouselCategory>
+      </section>
+      <section className={styles.FormArea}>
+          <SigIn image={FormDog} ></SigIn>
+      </section>
     </section>
   );
 }

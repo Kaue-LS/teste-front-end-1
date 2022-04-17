@@ -11,7 +11,7 @@ export default function CardProduct({props,onclick}){
     
     return(
         <>
-        <section className='Card-Product' onClick={()=>setProduct(props)}>
+        <div className='Card-Product' onClick={()=>setProduct(props)}>
             <span className='discount'>40% OFF</span>
             <div className='main-info' onClick={(onclick)}>
                 <img src={props.photo} alt={props.productName}/>
@@ -26,7 +26,7 @@ export default function CardProduct({props,onclick}){
             
             <span className={!favorite?'favorite':'favorite-active'} onClick={()=>setFavorite(!favorite)}>{favorite?<AiFillHeart/>:<AiOutlineHeart/>}</span>
            
-        </section>
+        </div>
 
     
         </>
