@@ -1,5 +1,5 @@
 # Projeto
--Para iniciar precisa abrir no Vs Code e no terminal digital npm run dev
+-Para iniciar precisa abrir no Vs Code e no terminal digital "**npm run dev**"
 
 -Não consegui utilizar a Api então peguei o arquivo json e fiz o próprio servidor no projeto para utiliza-la, por esse motivo é preciso iniciar tanto a pagina como o servidor
 
