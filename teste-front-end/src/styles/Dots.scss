@@ -1,0 +1,18 @@
+.Dots{
+    display: flex;
+    width: 20%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+
+    .button-dot{
+        border: 2px solid #9F9F9F;
+        border-radius: 100%;
+        width: 5px;
+        margin: 0 7px;
+        padding: 5px 5px;
+    }
+    .active{
+        background-color: #9F9F9F;
+    }
+}

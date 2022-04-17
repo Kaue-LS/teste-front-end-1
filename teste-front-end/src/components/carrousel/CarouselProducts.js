@@ -12,11 +12,12 @@ export default function CarouselProducts({children}){
         shouldResetAutoplay
         //   autoPlaySpeed={0}
         centerMode={false}
-      className=" Carrousel-Category"
+      className=" Carrousel-Category Carrousel-Products"
         containerClass="container"
         dotListClass=""
         //   draggable
         // customDot={images}
+        
         infinite={true}
         itemClass=""
         keyBoardControl

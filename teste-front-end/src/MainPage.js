@@ -20,14 +20,17 @@ import Options from "./components/options/Options";
 import CardProduct from "./components/card/CardProducts";
 import { useEffect, useState } from "react";
 import {Api} from "./components/api/Api";
+import Dot from "./components/dot/Dot";
+import CardOpenProduct from "./components/modal/CardOpenProduct";
 
 
 
 export default function MainPage() {
   const {option,setOption}=useOptions()
-  const [loadApi,setLoadApi]=useState(false)
   const [apiData,setApiData]=useState([])
-  console.log(apiData.length)
+  const [loadApi,setLoadApi]=useState(false)
+  const [openProduct,setOpenProduct]=useState(false)
+  // console.log(apiData)
 
   useEffect(()=>{
     if(!loadApi){
@@ -85,6 +88,8 @@ export default function MainPage() {
           ))}
         </CarrouselCategory>
       </div>
+
+      
       <div className={styles.Section}>
         <div className={styles.TitleOptions}>
           <h3>Meu cachorro...</h3>
@@ -96,9 +101,20 @@ export default function MainPage() {
         </div>
         <CarouselProducts>
           {apiData.map((item,index)=>(
-          <CardProduct props={item} key={index}></CardProduct>
+          <CardProduct onclick={()=>setOpenProduct(!openProduct)} props={item} key={index}></CardProduct>
           ))}
         </CarouselProducts>
+        {
+              openProduct&&(
+                  <div className={styles.openProduct}>
+                    <CardOpenProduct closeModal={()=>setOpenProduct(!openProduct)}></CardOpenProduct>
+                  </div>
+              )                
+            }
+        <div className={styles.DotArea}>
+          <p>Ver todos</p>
+          <Dot props={5}></Dot>
+        </div>
       </div>
     </section>
   );

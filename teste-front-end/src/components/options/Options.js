@@ -4,7 +4,7 @@ import { useEffect} from 'react'
 import { useOptions } from '../context/OptionsContext'
 export default function Options({options}){
     const {option,setOption}= useOptions()
-    const limit = options.length
+    // const limit = options.length
 
     // console.log(limit)
     // const [active,setActive]=useState(false)

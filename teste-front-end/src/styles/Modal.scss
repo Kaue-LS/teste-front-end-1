@@ -1,0 +1,52 @@
+.Modal{
+    background-color: white;
+    
+    width: 769px;
+height: 355px;
+    padding: 15px 0px;
+    display: flex;
+    border-radius: 6px;
+    display: flex;
+
+    img{
+        margin: auto;
+        width: 250px;
+height: 250px;
+    }
+    .Modal-Info{
+        margin: 0 30px 0 auto;
+        display: flex;
+        flex-direction: column;
+        
+
+        span{
+            color: #707070;
+            font-weight: 300;
+            font-size: 33px;
+            margin: 0 0px 0px auto;
+        }
+        .Name{
+            color: #041E50;
+            font-weight: 400;
+font-size: 20px;
+        }
+        .Price{
+            margin: 20px 0;
+            font-weight: 900;
+font-size: 20px;
+            color:#041E50;
+        }
+        article{
+            width: 90%;
+            font-weight: 400;
+font-size: 10px;
+margin:  0 0 20px  0;
+        }
+        .Detail{
+            color:#041E50;
+
+            font-weight: 400;
+font-size: 12px;
+        }
+    }
+}
