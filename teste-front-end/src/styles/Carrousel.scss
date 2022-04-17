@@ -94,16 +94,70 @@
   }
 }
 .Carrousel-Category{
-  z-index: 88888;
-
+  width: 95%;
+  margin: 0 auto;
   .react-multiple-carousel__arrow--left{
     top:35%;
-    left: 5px;
+    left: 0px;
     box-shadow: 0px 6px 16px rgba(179, 134, 0, 0.24);
   }
   .react-multiple-carousel__arrow--right{
     top:35%;
-    right: 5px;
+    right: 0px;
+    box-shadow: 0px 6px 16px rgba(179, 134, 0, 0.24);
+  }
+  .react-multiple-carousel__arrow {
+    background-color: wheat;
+
+  }
+  .react-multiple-carousel__arrow::before {
+    color: #000;
+    font-weight: 800;
+    z-index: 99999;
+
+    font-size: 14px;
+  }
+  .react-multiple-carousel__arrow {
+    position: absolute;
+    outline: 0;
+    transition: all .5s;
+    border-radius: 35px;
+    z-index: 1000;
+    border: 0;
+
+    background: white;
+    min-width: 32px;
+    min-height: 32px;
+    opacity: 1;
+    cursor: pointer;
+}
+  display: flex;
+  button{
+    background-color: black;
+    color: black;
+  }
+  button:hover{
+    color: black;
+    background-color: white;
+  }
+
+
+
+ 
+}
+.Carrousel-Marc{
+  height: 250px;
+  width: 95%;
+  margin: 0 auto;
+  .react-multiple-carousel__arrow--left{
+    top:40%;
+    left: 0px;
+    position: absolute;
+    box-shadow: 0px 6px 16px rgba(179, 134, 0, 0.24);
+  }
+  .react-multiple-carousel__arrow--right{
+    top:40%;
+    right: 0px;
     z-index: 99999;
     box-shadow: 0px 6px 16px rgba(179, 134, 0, 0.24);
   }
@@ -141,14 +195,6 @@
     color: black;
     background-color: white;
   }
-
-
-
- 
-}
-// .Carrousel-Products{
-
- 
-// }  
+}  
 
 

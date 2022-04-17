@@ -6,14 +6,13 @@ $color-buttons:#FBB900;
     .Section{
         font-weight: bolder;
         margin: 60px auto;
-        padding: 0 40px;
         display: flex;
         flex-direction: column;
         h3{
             color: $color-title;
             font-weight: bolder;
             font-size: 32px;
-            margin: 0 0 24px 20px;
+            margin: 0 auto 24px 50px;
         }
 
 
@@ -21,14 +20,25 @@ $color-buttons:#FBB900;
             display: flex;
             justify-content: space-between;
             h3{
-                margin: auto 0;
+                margin: 0 auto 24px 50px;
+
             }
             .Options{
+            margin: 0 50px 24px auto;
+
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 color: $color-buttons;
-
+                p{
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 30px;
+                    color: $color-buttons;
+                    margin: 10px 0;
+                    text-align: center;
+                    text-decoration-line:underline
+                }
                 // .IconLeft{
                 // }
                 // .IconRight{

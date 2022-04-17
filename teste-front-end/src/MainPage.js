@@ -4,24 +4,29 @@ import { AiOutlineLeft } from "react-icons/ai";
 import { AiOutlineRight } from "react-icons/ai";
 
 import Carrousel from "./components/carrousel/Carousel";
-import BackgroundImage from "../src/styles/img/background.png";
 import CarrouselCategory from "./components/carrousel/CarouselCategory";
 import CarouselProducts from "./components/carrousel/CarouselProducts";
 
+import BackgroundImage from "../src/styles/img/background.png";
 
 import Dog1 from "./styles/img/category/dog1.png";
 import Dog2 from "./styles/img/category/dog2.png";
 import Dog3 from "./styles/img/category/dog3.png";
 import Dog4 from "./styles/img/category/dog4.png";
 
+import Marc1 from './styles/img/marcs/buddy.png'
+import Marc2 from './styles/img/marcs/kong.png'
+import Marc3 from './styles/img/marcs/petgames.png'
+
+import {Api} from "./components/api/Api";
+import { useEffect, useState } from "react";
 import { useOptions } from "./components/context/OptionsContext";
+
 import Card from "./components/card/Card";
 import Options from "./components/options/Options";
-import CardProduct from "./components/card/CardProducts";
-import { useEffect, useState } from "react";
-import {Api} from "./components/api/Api";
 import Dot from "./components/dot/Dot";
 import CardOpenProduct from "./components/modal/CardOpenProduct";
+import CardProduct from "./components/card/CardProducts";
 
 
 
@@ -69,15 +74,23 @@ export default function MainPage() {
     { title: "É ansioso", id: 3 },
     { title: "É estressado", id: 4 },
   ];
-
+  const MarcList=[
+    Marc1,
+    Marc2,
+    Marc3,
+    Marc1,
+    Marc2,
+    Marc3,
+  ]
 
   return (
     <section className={styles.MainPage}>
       <Carrousel images={BackgroundImage} />
 
+      {/* Categorias */}
       <div className={styles.Section}>
         <h3>Categorias</h3>
-        <CarrouselCategory showArrows={true}>
+        <CarrouselCategory className={'Carrousel-Category'} itemDesktop={4} showArrows={true}>
           {CategoryList.map((item, index) => (
             <Card
               className={"Card-Category"}
@@ -89,7 +102,7 @@ export default function MainPage() {
         </CarrouselCategory>
       </div>
 
-      
+      {/* Produtos */}
       <div className={styles.Section}>
         <div className={styles.TitleOptions}>
           <h3>Meu cachorro...</h3>
@@ -115,6 +128,23 @@ export default function MainPage() {
           <p>Ver todos</p>
           <Dot props={5}></Dot>
         </div>
+      </div>
+
+      {/* Marcas */}
+      <div className={styles.Section}>
+      <div className={styles.TitleOptions}>
+          <h3>Principais marcas</h3>
+          <div className={styles.Options}>
+          <p>Ver todos</p>
+          </div>
+      </div>
+          <CarrouselCategory className={'Carrousel-Marc'} itemDesktop={6}>
+            {
+              MarcList.map((item,index)=>(
+                <Card  url={item} key={index} className={"Card-Marc Card-"+index}/>
+              ))
+            }
+          </CarrouselCategory>
       </div>
     </section>
   );

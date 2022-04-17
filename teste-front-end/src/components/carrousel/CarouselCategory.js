@@ -3,7 +3,7 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "../../styles/Carrousel.scss";
-export default function CarouselCategory({showArrows, children }) {
+export default function CarouselCategory({className,showArrows, itemDesktop,children }) {
   // const CustomRightArrow = ({onClick}) => {
   //   return <button style={{backgroundColor:'wheat'}} onClick={() => onClick()} >direita</button>;
   // };
@@ -16,7 +16,7 @@ export default function CarouselCategory({showArrows, children }) {
         shouldResetAutoplay
         //   autoPlaySpeed={0}
         centerMode={false}
-      className=" Carrousel-Category"
+      className={className}
         containerClass="container"
         dotListClass=""
         //   draggable
@@ -25,7 +25,7 @@ export default function CarouselCategory({showArrows, children }) {
         itemClass=""
         keyBoardControl
         renderDotsOutside={true}
-        
+      
         responsive={{
           desktop: {
             breakpoint: {
@@ -33,7 +33,7 @@ export default function CarouselCategory({showArrows, children }) {
               min: 1075,
             },
 
-            items: 4,
+            items: itemDesktop,
           },
           mobile: {
             breakpoint: {
