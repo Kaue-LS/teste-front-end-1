@@ -4,15 +4,26 @@ import {AiOutlineRight} from 'react-icons/ai'
 import {AiOutlineDown} from 'react-icons/ai'
 export default function Carousel(props) {
   return (
-    <section className="Carrousel">
+    <section className={props.className}>
         <div className="Carrousel-Buttons">
-        <div className="Left-Button Button">
-            <AiOutlineLeft/>
-        </div>  
+            {props.showArrows&&(
+                <div className="Left-Button Button">
+                    <AiOutlineLeft/>
+                </div>  
+            )}
+    
+    
     <div className="Middle-Footer-Buttons">
         <div className="Middle-Button ">
-            <h3>As melhores guias para os melhores passeios.</h3>
-            <button>Confira</button>
+            <h3>{props.text}</h3>
+            {
+                props.subtext&&(
+                    <p>{props.subtext}</p>
+                )
+            }
+            <button>
+                {props.button}
+            </button>
         </div>
         <div className="Footer-Button">
             <div>
@@ -20,14 +31,20 @@ export default function Carousel(props) {
             <div></div>
             <div></div>
             </div>
-            <div  className="Icon-Down">
-            <AiOutlineDown/>
-            </div>
+            {props.showArrows&&(
+                 <div  className="Icon-Down">
+                 <AiOutlineDown/>
+                 </div>
+            )}
+           
         </div>
         </div>
-        <div className="Rigth-Button Button">
-            <AiOutlineRight/>
-        </div>
+        {props.showArrows&&(
+             <div className="Rigth-Button Button">
+             <AiOutlineRight/>
+         </div>
+        )}
+       
         </div>
         <img className="Carrousel-Images" src={props.images} alt=''/>
     </section>

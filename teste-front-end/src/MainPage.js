@@ -18,6 +18,9 @@ import Marc1 from './styles/img/marcs/buddy.png'
 import Marc2 from './styles/img/marcs/kong.png'
 import Marc3 from './styles/img/marcs/petgames.png'
 
+import backgroundDog1 from '../src/styles/img/background-dog1.png'
+import backgroundDog2 from '../src/styles/img/background-dog2.png'
+
 import {Api} from "./components/api/Api";
 import { useEffect, useState } from "react";
 import { useOptions } from "./components/context/OptionsContext";
@@ -27,6 +30,7 @@ import Options from "./components/options/Options";
 import Dot from "./components/dot/Dot";
 import CardOpenProduct from "./components/modal/CardOpenProduct";
 import CardProduct from "./components/card/CardProducts";
+import Carousel from "./components/carrousel/Carousel";
 
 
 
@@ -82,10 +86,25 @@ export default function MainPage() {
     Marc2,
     Marc3,
   ]
+  const backgroundDog=[
+    {
+    url:backgroundDog1,
+    text:'Parceiros',
+    subtext:'Lorem ipsum dolor sit amet, consectetur',
+    button:'Confira'
+  },
+  {
+    url:backgroundDog2,
+    text:' Assinatura Cãoselheiro',
+    subtext:' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor adipiscing quis non sed.',
+    button:'Saiba Mais'
+
+  },
+  ]
 
   return (
     <section className={styles.MainPage}>
-      <Carrousel images={BackgroundImage} />
+      <Carrousel button={'Confira'} className={'Carrousel'} text={"As melhores guias para os melhores passeios"} showArrows={true} images={BackgroundImage} />
 
       {/* Categorias */}
       <div className={styles.Section}>
@@ -145,6 +164,26 @@ export default function MainPage() {
               ))
             }
           </CarrouselCategory>
+      </div>
+
+      <div className={styles.Section}>
+        <div className={styles.CarouselGroup}>
+        {
+          backgroundDog.map((item,index)=>(
+            <Carousel key={index} button={item.button} className={'Carousel-Card-'+index} text={item.text} subtext={item.subtext} showArrows={false} images={item.url}></Carousel>
+          ))
+        }
+        
+        </div>
+        <div className={styles.DotDogGroup}>
+          <Dot props={3} active={0}></Dot>
+        </div>
+      </div>
+
+      <div className={styles.Section}>
+          <h3>Confira o nosso blog</h3>
+
+          
       </div>
     </section>
   );
